@@ -8,7 +8,7 @@
               url: "saveScreen",
               data: {
                fileName:new Date().getTime(),
-               imgBase64: canvas.toDataURL("image/png")
+               imgBase64: canvas.toDataURL("image/png").replace(/^data:image\/png;base64,/,"")
               }
             }).done(function(response) {
                 alert(response);
